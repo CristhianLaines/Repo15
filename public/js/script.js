@@ -16,7 +16,7 @@ const answers_no = {
         "I am begging you to stop!",
         "Ok, Let's just start over.."
     ],
-    italiano: [
+    Italiano: [
         "No",
         "Sei sicuro?",
         "Sei davvero sicuro??",
@@ -37,10 +37,10 @@ const answers_no = {
 
 answers_yes = {
     "english": "Yes",
-    "italiano": "Sì"
+    "Italiano": "Sì"
 }
 
-let language = "italiano"; // Default language is English
+let language = "Italiano"; // Default language is Italian
 const no_button = document.getElementById('no-button');
 const yes_button = document.getElementById('yes-button');
 let i = 1;
@@ -105,7 +105,7 @@ function changeLanguage() {
 
     // Update question heading
     const questionHeading = document.getElementById("question-heading");
-    if (language === "italiano") {
+    if (language === "Italiano") {
         questionHeading.textContent = "Vuoi essere il mio Valentino?";
     } else {
         questionHeading.textContent = "Will you be my valentine?";
@@ -123,7 +123,7 @@ function changeLanguage() {
 
     // Update success message
     const successMessage = document.getElementById("success-message");
-    if (language === "italiano") {
+    if (language === "Italiano") {
         successMessage.textContent = "Sì, ci vediamo presto";
     } else {
         successMessage.textContent = "Yepppie, see you sooonnn";
