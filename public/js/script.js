@@ -16,49 +16,31 @@ const answers_no = {
         "I am begging you to stop!",
         "Ok, Let's just start over.."
     ],
-    french: [
-        "Non",
-        "Tu es sûr ?",
-        "Tu es vraiment sûr ??",
-        "Tu es vraiment vraiment sûr ???",
-        "Réfléchis encore?",
-        "Tu ne crois pas aux deuxièmes chances ?",
-        "Pourquoi tu es si froid?",
-        "Peut-être, on peut en parler ?",
-        "Je ne vais pas demander encore une fois!",
-        "D'accord, maintenant ca me fait mal!",
-        "Tu es juste méchant!",
-        "Pourquoi tu me fais ça?",
-        "Donnez-moi une chance plz!",
-        "Je te supplie d'arrêter!",
-        "D'accord, recommençons.."
-    ],
-    thai: [
-        "ไม่อ่ะ",
-        "แน่ใจจริงๆหรอคะ?",
-        "แน่ใจจริงๆ จริงๆนะคะ?",
-        "อย่าบอกนะว่านี่แน่ใจสุดๆแล้วจริงๆ ?",
-        "ลองคิดดูอีกทีหน่อยสิคะ..",
-        "ขอโอกาศที่สองทีค่ะ..",
-        "อย่าเย็นชาสิคะ กระซิกๆ",
-        "ขอร้องนะคะ",
-        "น้าาาๆๆๆๆๆ",
-        "เราจะร้องไห้เอานะ กระซิกๆ",
-        "จะเอางี้ๆจริงหรอคะ",
-        "ฮือออออ",
-        "ขอโอกาศครั้งที่สองที่ค่ะ!",
-        "ขอร้องละค่าาา",
-        "โอเคค่ะ.. งั้นเริ่มใหม่ !"
+    italiano: [
+        "No",
+        "Sei sicuro?",
+        "Sei davvero sicuro??",
+        "Sei davvero davvero sicuro???",
+        "Riflettici ancora?",
+        "Non credi nelle seconde possibilità?",
+        "Perché sei così freddo?",
+        "Forse possiamo parlarne?",
+        "Non lo chiederò un'altra volta!",
+        "Va bene, adesso mi fa male!",
+        "Sei proprio cattivo!",
+        "Perché mi fai questo?",
+        "Dammi un'altra possibilità, ti prego!",
+        "Ti supplico di smetterla!",
+        "Va bene, ricominciamo.."
     ]
 };
 
 answers_yes = {
     "english": "Yes",
-    "french": "Oui",
-    "Thailand": "เย่ คืนดีกันแล้วน้า"
+    "italiano": "Sì"
 }
 
-let language = "english"; // Default language is English
+let language = "italiano"; // Default language is English
 const no_button = document.getElementById('no-button');
 const yes_button = document.getElementById('yes-button');
 let i = 1;
@@ -123,10 +105,8 @@ function changeLanguage() {
 
     // Update question heading
     const questionHeading = document.getElementById("question-heading");
-    if (language === "french") {
-        questionHeading.textContent = "Tu veux être mon valentin?";
-    } else if (language === "thai") {
-        questionHeading.textContent = "คืนดีกับเราได้อ่ะป่าว?";
+    if (language === "italiano") {
+        questionHeading.textContent = "Vuoi essere il mio Valentino?";
     } else {
         questionHeading.textContent = "Will you be my valentine?";
     }
@@ -143,11 +123,9 @@ function changeLanguage() {
 
     // Update success message
     const successMessage = document.getElementById("success-message");
-    if (language === "french") {
-        successMessage.textContent = "Yepppie, à bientôt :3";
-    } else if (language === "thai") {
-        successMessage.textContent = "ฮูเร่ คืนดีกันแล้วน้า :3";
+    if (language === "italiano") {
+        successMessage.textContent = "Sì, ci vediamo presto";
     } else {
-        successMessage.textContent = "Yepppie, see you sooonnn :3";
+        successMessage.textContent = "Yepppie, see you sooonnn";
     }
 }
